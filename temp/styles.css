@@ -19,25 +19,36 @@ body {
     background-color: #740d0d;
 
     animation-name: myAnim;
-    animation-duration: 2s;
-    animation-delay: 0.2s;
-    animation-direction: forwards;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-direction: normal;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
 }
 
 @keyframes myAnim {
     0% {
-        left: 0px;
-        top: 0px;
-    }
-    50% {
-        left: 500px;
+        /* left: 0px;
+            top: 0px; */
+
+            /* transform: rotate(0deg);
+                transform-origin: right bottom; */
+                
+                transform: translateX(0px);
     }
 
+        /* 50% {
+            left: 500px;
+            top: 100px;
+        } */
+
     100% {
-        left: 500px;
-        top: 0 px;
-        
+        /* left: 500px;
+            top: 0 px; */
+
+            /* transform: rotate(360deg);
+                transform-origin: 50% 50%; */
+
+                transform: translateX(100px);
     }
 }
