@@ -1,5 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
-    margin: 5px;
+    margin: 5 px;
 }
 
 .row {
@@ -15,10 +23,12 @@ body {
     height: 1000px;
 }
 
-.colomn.middle {
-    flex-grow: 5;
+.column.middle {
+    flex-grow: 3;
+    flex-basis: 60%;
 }
 
 .colum.outer {
     flex-grow: 1;
+    flex-basis: 20%;
 }
