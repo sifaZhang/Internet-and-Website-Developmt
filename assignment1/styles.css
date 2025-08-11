@@ -96,7 +96,7 @@ section {
 #bannerAd {
     /* hard coded dimensions to avoid animation scaling issues */
     width: 1000px;
-    height: 200px;
+    height: 300px;
 
     /* reset display mode */
     display: block;
@@ -146,7 +146,7 @@ section {
 #banner_scene1_img {
     position: absolute;
     width: 2000px;
-    top: -650px;
+    top: -550px;
     left: 0px;
 
     animation-name: bannerScene1Background;
@@ -224,7 +224,7 @@ section {
     position:absolute;
     left: 20px;
     top: 65px;
-    color: blue;
+    color: rgb(76, 7, 37);
     font-size: 16px;
     opacity: 0;
 
@@ -235,16 +235,182 @@ section {
 }
 
 @keyframes scene1Text3 {
-    from {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.hidden {
+  display: none;
+}
+
+#banner_scene2_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    transform: scale(0);
+    transform-origin: center center; /* 指定缩放中心 */
+
+    animation-delay: 1s;
+    animation-name: bannerScene2Background;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes bannerScene2Background {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+#bannerScene2Text1 {
+    position:absolute;
+    left: 300px;
+    top: 60px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+
+    animation-name: scene2Text1;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes scene2Text1 {
+    0% {
+        font-size: 30px;
+        color: black;
+        opacity: 1;
+    }
+    50% {
+        font-size: 40px;
+        color: red;
+        opacity: 1;
+    }
+    100% {
+        font-size: 30px;
+        color: yellow;
+        opacity: 1;
+    }
+} 
+
+#bannerScene2Text2 {
+    position:absolute;
+    left: 120px;
+    top: 100px;
+    color: yellow;
+    font-size: 20px;
+    opacity: 0;
+
+    animation-name: scene2Text2;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes scene2Text2 {
+  from {
     transform: translateX(-100%);
     opacity: 0;
   }
   to {
-    transform: translateX(20px);
+    transform: translateX(0px);
     opacity: 1;
   }
 } 
 
-.hidden {
-  display: none;
+#bannerScene2Text3 {
+    position:absolute;
+    left: 200px;
+    top: 140px;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+
+    animation-name: scene2Text3;
+    animation-duration: 1s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes scene2Text3 {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+#bannerScene2Text4 {
+    position:absolute;
+    left: 20px;
+    top: 100px;
+    color: white;
+    font-size: 40px;
+
+    transform: scale(0);
+    transform-origin: center center; /* 指定缩放中心 */
+
+    animation-name: scene2Text4;
+    animation-duration: 1s;
+    animation-delay: 8s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes scene2Text4 {
+ 0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+#bannerScene2Text5 {
+    position:absolute;
+    left: 300px;
+    top: 180px;
+    color: white;
+    font-size: 20px;
+
+    transform: scale(0);
+    transform-origin: center center; /* 指定缩放中心 */
+
+    animation-name: scene2Text5;
+    animation-duration: 1s;
+    animation-delay: 9s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes scene2Text5 {
+ 0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
