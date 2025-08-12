@@ -414,3 +414,35 @@ section {
         transform: scale(1);
     }
 }
+
+.form-instructions {
+    display: flex;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+    flex-direction: column;   /* 垂直排列两行 */
+    gap: 10px;                /* 行间距 */
+    text-align: center;       /* 内容居中 */
+}
+
+.firstColumn {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.secondColumn {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.rowstyle {
+    height: 40px;
+}
+
+.summary {
+    justify-content: center;  /* 水平居中 */
+    align-items: center;      /* 垂直居中 */
+    flex-direction: column;   /* 垂直排列两行 */
+    gap: 10px;                /* 行间距 */
+    text-align: center;       /* 内容居中 */
+}
+
