@@ -1,0 +1,40 @@
+#animWrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    overflow: hidden;
+
+    width: 800px;
+    height: 600px;
+    border: 2px solid black;
+}
+
+#animBlock {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+    background-color: green;
+}
+
+#animBlock2 {
+    position: absolute;
+
+    left: 770px;
+
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+
+#startAnim {
+    position: absolute;
+    top: 280px;
+    left: 380px;
+}
+
+.hidden {
+  display: none;
+}
