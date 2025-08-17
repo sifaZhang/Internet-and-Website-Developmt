@@ -1,0 +1,28 @@
+
+#scene2 {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+
+    animation-name: scene2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+}
+
+#adReplay {
+    position: absolute;
+    left: 170px;
+    top: 370px;
+    font-size: 60px;
+}
+
+@keyframes scene2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
