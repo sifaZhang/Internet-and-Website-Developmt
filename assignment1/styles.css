@@ -429,9 +429,16 @@ section {
     padding-right: 10px;
 }
 
+.firstColumnButton {
+    text-align: center;
+}
+
 .secondColumn {
     text-align: left;
     padding-left: 10px;
+}
+.secondColumnButton {
+    text-align: center;
 }
 
 .rowstyle {
