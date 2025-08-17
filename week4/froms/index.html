@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    
+
 </head>
 <body>
     <secion>
-        <form>
-            <label for="ftname">Name:</label>
-            <input type="text" id="ftname" name="ftname" required>
+        <form id="user-form">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="user-name" required>
             
-            <label for="ltname">Name:</label>
-            <input type="text" id="ltname" name="ltname" required>
+            <label for="last-name">Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -26,9 +29,13 @@
             <label for="address">Billing Address:</label>
             <input type="text" id="address" name="address" required>
             
-            <button type="submit">Submit</button>
+            <button type="button" id="user-form-submit">Create User</button>
         </form>
     </secion>
+    <section id="user-list">
+
+    </section>
     
+    <script src="./submitform.js"></script>
 </body>
 </html>
