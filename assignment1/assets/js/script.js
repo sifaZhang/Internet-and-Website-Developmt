@@ -80,3 +80,11 @@ document.getElementById("ticketForm").addEventListener("submit", function(event)
   summaryBooking.classList.remove('hidden'); // 显示总结页面
   summaryBooking.style.display = 'flex';
 });
+
+function clickBanner() {
+    window.open("https://jschollitt.github.io/TeWaioTane/index.html", "_blank");
+}
+
+function clickSidebar() {
+    window.open("https://www.ea.govt.nz/", "_blank");
+}
