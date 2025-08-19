@@ -564,9 +564,34 @@ section {
     background-color: yellow;
     border-radius: 10px;
     padding: 5px;
+    font-weight: bold;
 }
 
-#sidebarScene3img1 {
+#sidebarScene3Text10 {
+    top: 200px;
+    left: 30px;
+    font-size: 16px;
+    font-weight: bold;    
+    color: white;
+    position:absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#replay {
+    position: absolute;
+    top: 380px;
+    left: 120px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+#replay:not(.hidden) {
+    opacity: 1;
+}
+
+
+#sidebarScene3img1,
+#sidebarScene3img2 {
     position: absolute;
     left: 0px;
     top: 500px;
@@ -619,7 +644,7 @@ section {
     font-size: 8px;
 }
 
-#sidebarScene3img2 {
+#sidebarScene3img3 {
     position: absolute;
     left: 110px;
     top: 700px;

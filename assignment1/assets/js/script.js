@@ -1,7 +1,93 @@
-window.addEventListener("DOMContentLoaded", function() {
-    // perform on-load actions here
+window.addEventListener("DOMContentLoaded", function () {
+    clickStart();
+
+    document.getElementById('replay').addEventListener('click', function (event) {
+        event.stopPropagation(); // 阻止冒泡
+        clickStart(); // 重新播放动画
+    });
 });
 
+//side ad
+function animate()
+{
+    const sidebarScene1 = document.getElementById('sidebarScene1');
+    const sidebarScene2 = document.getElementById('sidebarScene2');
+    const sidebarScene3 = document.getElementById('sidebarScene3');
+
+    sidebarScene1.classList.remove('hidden');
+    sidebarScene2.classList.add('hidden');
+    sidebarScene3.classList.add('hidden');
+
+    const sidebarScene3Text9 = document.getElementById('sidebarScene3Text9');
+    const sidebarScene3Text10 = document.getElementById('sidebarScene3Text10');
+    const sidebarScene3img1 = document.getElementById('sidebarScene3img1');
+    const sidebarScene3img2 = document.getElementById('sidebarScene3img2');
+    const replay = document.getElementById('replay');
+
+    sidebarScene3img1.classList.remove('hidden');
+    sidebarScene3img2.classList.add('hidden');
+    sidebarScene3Text9.classList.add('hidden');
+    sidebarScene3Text10.classList.add('hidden');
+    replay.classList.add('hidden');
+
+    let phase = 1;
+    let second = 0;
+    let animId;
+
+    function doAnimate() {
+        //add second
+        second++;
+        
+        if( phase == 1){
+            if(second >= 3) {
+                phase = 2;
+                sidebarScene1.classList.add('hidden');
+                sidebarScene2.classList.remove('hidden');
+            }
+        }
+        else if (phase == 2) {
+          if(second >= 6) {
+                phase = 3;
+                sidebarScene2.classList.add('hidden');
+                sidebarScene3.classList.remove('hidden');
+                replay.classList.add('hidden');
+            }
+        } else if (phase == 3) {
+            if(second < 9) {
+                sidebarScene3img1.classList.remove('hidden');
+                sidebarScene3img2.classList.add('hidden');
+                sidebarScene3Text9.classList.add('hidden');
+                sidebarScene3Text10.classList.add('hidden');
+                replay.classList.add('hidden');
+            } else if (second < 12) {
+                sidebarScene3img1.classList.add('hidden');
+                sidebarScene3Text10.classList.add('hidden');
+                replay.classList.add('hidden');
+                sidebarScene3img2.classList.remove('hidden');
+                sidebarScene3Text9.classList.remove('hidden');
+            }
+            else {
+                phase = 4;
+            }
+        } 
+        else {
+            sidebarScene3Text10.classList.remove('hidden');
+            replay.classList.remove('hidden');
+            clearInterval(animId);
+        }
+    }
+
+    animId = setInterval(doAnimate, 1000);
+}
+
+
+function clickStart() {
+    document.getElementById('replay').classList.add('hidden');
+    animate();
+}
+
+
+//banner ad
 const scene2 = document.getElementById('adScene2');
 const bannerScene1Text3 = document.getElementById('bannerScene1Text3');
 bannerScene1Text3.addEventListener('animationend', () => {
