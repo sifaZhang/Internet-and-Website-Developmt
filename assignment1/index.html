@@ -38,196 +38,221 @@
             </div>
         </div>
         <main class="main">
-            <h1>Whakatere Pass Ticket</h1>
-            <form id="ticketForm">
-                <div class="form-instructions">
-                    <table id="page1" class="page">
-                        <tr class="rowstyle">
-                            <td class="firstColumn">
-                                <label for="ticketDate">Date:</label>
-                            </td>
-                            <td class="secondColumn">
-                                <input type="date" id="ticketDate" name="ticketDate" required>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td class="firstColumn">
-                                <label for="adults">Adults:</label>
-                            </td>
-                            <td class="secondColumn">
-                                <input type="text" id="adults" name="adults" required>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td class="firstColumn">
-                                <label for="children">Children:</label>
-                            </td>
-                            <td class="secondColumn">
-                                <input type="text" id="children" name="children" required>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td class="firstColumnButton">
-                
-                            </td>
-                            <td class="secondColumnButton">
-                                <button type="button" id="btnNext1" onclick="nextPage(1)">Next</button>
-                                <!-- <i class="fa-solid fa-arrow-right-long" id="btnNext1" onclick="nextPage(1)"></i> -->
-                            </td>
-                        </tr>
-                    </table>
-                    <table id="page2" class="page hidden">
-                       <tr class="rowstyle">
-                            <td class="firstColumn">
-                                <label for="contactName">Contact Name:</label>
-                            </td>
-                            <td class="secondColumn">
-                                <input type="text" id="contactName" name="contactName" required>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td class="firstColumn">
-                                <label for="email">Email:</label>
-                            </td>
-                            <td class="secondColumn">
-                                <input type="email" id="email" name="email" required>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td class="firstColumnButton">
-                                <button id="btnPrevious2" type="button" onclick="previousPage(2)">Previous</button>
-                                <!-- <i class="fa-solid fa-arrow-left-long" id="btnPrevious2" onclick="previousPage(2)"></i> -->
-                            </td>
-                            <td class="secondColumnButton">
-                                <button id="btnNext2" type="button" onclick="nextPage(2)">Next</button>
-                                <!-- <i class="fa-solid fa-arrow-right-long" id="btnNext2" onclick="nextPage(2)"></i> -->
-                            </td>
-                        </tr>
-                    </table>
-                    <table id="page3" class="page hidden">
-                        <tr class="rowstyle">
-                            <td class="firstColumn">
-                                <label for="ticketType">Ticket Type:</label>
-                            </td>
-                            <td class="secondColumn">
-                                <select id="ticketType" name="ticketType" required>
-                                    <option value="premium">Premium</option>
-                                    <option value="standard">Standard</option>
-                                    <option value="student">Student</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td class="firstColumn">
-                                <label for="locker">Storage Locker:</label>
-                            </td>
-                            <td class="secondColumn">
-                                <label>
-                                    <input type="radio" name="locker" value="yes" required> Yes
-                                </label>
-                                <label>
-                                    <input type="radio" name="locker" value="no"> No
-                                </label>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td id="btnPrevious3" class="firstColumnButton">
-                                <button id="btnPrevious3" type="button" onclick="previousPage(3)">Previous</button>
-                                <!-- <i class="fa-solid fa-arrow-left-long" id="btnPrevious3" onclick="previousPage(3)"></i> -->
-                            </td>
-                            <td class="secondColumnButton">
-                                <button id="btnNext3" type="button" onclick="nextPage(3)">Next</button>
-                                <!-- <i class="fa-solid fa-arrow-right-long" id="btnNext3" onclick="nextPage(3)"></i> -->
-                            </td>
-                        </tr>
-                    </table>
-                    <table id="page4" class="page hidden">
-                        <tr class="rowstyle">
-                            <td>
-                                <label>
-                                    <input type="checkbox" name="term" value="no" required>
-                                    Terms & Conditions
-                                </label>
-                            </td>
-                        </tr>
-                        <tr class="rowstyle">
-                            <td class="firstColumnButton">
-                                <button id="btnPrevious4" type="button" onclick="previousPage(4)">Previous</button>
-                                <!-- <i class="fa-solid fa-arrow-left-long" id="btnPrevious4" onclick="previousPage(4)"></i> -->
-                            </td>
-                            <td class="secondColumn">
-                                <button type="submit">Submit</button>
-                            </td>
-                        </tr>
-                    </table>
-                
-                    <div id="taskProgressDiv">
-                        <label for="taskProgress">Task Progress:</label>
-                        <progress id="taskProgress" value="0" max="100"></progress>
+            <section>
+                <h1 class="underline">Whakatere Pass Ticket</h1>
+                <form id="ticketForm">
+                    <div class="form-instructions">
+                        <table id="page1" class="page">
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                    <label for="ticketDate">Date:</label>
+                                </td>
+                                <td class="secondColumn">
+                                    <input type="date" id="ticketDate" name="ticketDate" required>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                    <label for="adults">Adults:</label>
+                                </td>
+                                <td class="secondColumn">
+                                    <input type="text" id="adults" name="adults" required>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                    <label for="children">Children:</label>
+                                </td>
+                                <td class="secondColumn">
+                                    <input type="text" id="children" name="children" required>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumnButton">
+                                </td>
+                                <td class="secondColumnButton">
+                                    <button type="button" id="btnNext1" onclick="nextPage(1)">Next</button>
+                                    <!-- <i class="fa-solid fa-arrow-right-long" id="btnNext1" onclick="nextPage(1)"></i> -->
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="page2" class="page hidden">
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                    <label for="contactName">Contact Name:</label>
+                                </td>
+                                <td class="secondColumn">
+                                    <input type="text" id="contactName" name="contactName" required>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                    <label for="email">Email:</label>
+                                </td>
+                                <td class="secondColumn">
+                                    <input type="email" id="email" name="email" required>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                </td>
+                                <td class="secondColumn">
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumnButton">
+                                    <button id="btnPrevious2" type="button" onclick="previousPage(2)">Previous</button>
+                                    <!-- <i class="fa-solid fa-arrow-left-long" id="btnPrevious2" onclick="previousPage(2)"></i> -->
+                                </td>
+                                <td class="secondColumnButton">
+                                    <button id="btnNext2" type="button" onclick="nextPage(2)">Next</button>
+                                    <!-- <i class="fa-solid fa-arrow-right-long" id="btnNext2" onclick="nextPage(2)"></i> -->
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="page3" class="page hidden">
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                    <label for="ticketType">Ticket Type:</label>
+                                </td>
+                                <td class="secondColumn">
+                                    <select id="ticketType" name="ticketType" required>
+                                        <option value="premium">Premium</option>
+                                        <option value="standard">Standard</option>
+                                        <option value="student">Student</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                    <label for="locker">Storage Locker:</label>
+                                </td>
+                                <td class="secondColumn">
+                                    <label>
+                                        <input type="radio" name="locker" value="yes" required> Yes
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="locker" value="no"> No
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                </td>
+                                <td class="secondColumn">
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td id="btnPrevious3" class="firstColumnButton">
+                                    <button id="btnPrevious3" type="button" onclick="previousPage(3)">Previous</button>
+                                    <!-- <i class="fa-solid fa-arrow-left-long" id="btnPrevious3" onclick="previousPage(3)"></i> -->
+                                </td>
+                                <td class="secondColumnButton">
+                                    <button id="btnNext3" type="button" onclick="nextPage(3)">Next</button>
+                                    <!-- <i class="fa-solid fa-arrow-right-long" id="btnNext3" onclick="nextPage(3)"></i> -->
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="page4" class="page hidden">
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                </td>
+                                <td class="secondColumn">
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="term" value="no" required>
+                                        Terms & Conditions
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumn">
+                                </td>
+                                <td class="secondColumn">
+                                </td>
+                            </tr>
+                            <tr class="rowstyle">
+                                <td class="firstColumnButton">
+                                    <button id="btnPrevious4" type="button" onclick="previousPage(4)">Previous</button>
+                                    <!-- <i class="fa-solid fa-arrow-left-long" id="btnPrevious4" onclick="previousPage(4)"></i> -->
+                                </td>
+                                <td class="secondColumn">
+                                    <button type="submit">Submit</button>
+                                </td>
+                            </tr>
+                        </table>
+            
+                        <div id="taskProgressDiv">
+                            <label for="taskProgress">Task Progress:</label>
+                            <progress id="taskProgress" value="25" max="100"></progress>
+                        </div>
                     </div>
+                </form>
+                <div id="summaryBooking" class="summary hidden">
+                    <h3>Booking Summary</h3>
+                    <table>
+                        <tr>
+                            <td class="firstColumn">
+                                <label>Date:</label>
+                            </td>
+                            <td class="secondColumn">
+                                <label id="ticketDateContent"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="firstColumn">
+                                <label>Adults:</label>
+                            </td>
+                            <td class="secondColumn">
+                                <label id="adultsContent"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="firstColumn">
+                                <label>Children:</label>
+                            </td>
+                            <td class="secondColumn">
+                                <label id="childrenContent"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="firstColumn">
+                                <label>Contact Name:</label>
+                            </td>
+                            <td class="secondColumn">
+                                <label id="contactNameContent"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="firstColumn">
+                                <label>Email:</label>
+                            </td>
+                            <td class="secondColumn">
+                                <label id="emailContent"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="firstColumn">
+                                <label>Ticket Type:</label>
+                            </td>
+                            <td class="secondColumn">
+                                <label id="ticketTypeContent"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="firstColumn">
+                                <label>Storage Locker:</label>
+                            </td>
+                            <td class="secondColumn">
+                                <label id="lockerContent"></label>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-            </form>
-            <div id="summaryBooking" class="summary hidden">
-                <h2>Booking Summary</h2>
-                <table>
-                    <tr>
-                        <td class="firstColumn">
-                            <label>Date:</label>
-                        </td>
-                        <td class="secondColumn">
-                            <label id="ticketDateContent"></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="firstColumn">
-                            <label>Adults:</label>
-                        </td>
-                        <td class="secondColumn">
-                            <label id="adultsContent"></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="firstColumn">
-                            <label>Children:</label>
-                        </td>
-                        <td class="secondColumn">
-                            <label id="childrenContent"></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="firstColumn">
-                            <label>Contact Name:</label>
-                        </td>
-                        <td class="secondColumn">
-                            <label id="contactNameContent"></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="firstColumn">
-                            <label>Email:</label>
-                        </td>
-                        <td class="secondColumn">
-                            <label id="emailContent"></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="firstColumn">
-                            <label>Ticket Type:</label>
-                        </td>
-                        <td class="secondColumn">
-                            <label id="ticketTypeContent"></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="firstColumn">
-                            <label>Storage Locker:</label>
-                        </td>
-                        <td class="secondColumn">
-                            <label id="lockerContent"></label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            </section>
         </main>
         <div class="sidebar" onclick="clickSidebar()">
             <div id="sidebarAd">

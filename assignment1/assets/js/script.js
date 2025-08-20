@@ -129,7 +129,7 @@ function nextPage(pageNumber) {
     nextPage.classList.remove('hidden');
 
     const taskProgress = document.getElementById('taskProgress');
-    taskProgress.value = pageNumber / totalPages * 100; // Assuming there are 4 pages, adjust as necessary
+    taskProgress.value = (pageNumber + 1) / totalPages * 100; // Assuming there are 4 pages, adjust as necessary
 }
 
 function previousPage(pageNumber) {
@@ -139,7 +139,7 @@ function previousPage(pageNumber) {
     nextPage.classList.remove('hidden');
 
     const taskProgress = document.getElementById('taskProgress');
-    taskProgress.value = (pageNumber - 2) / totalPages * 100; // Assuming there are 4 pages, adjust as necessary
+    taskProgress.value = (pageNumber - 1) / totalPages * 100; // Assuming there are 4 pages, adjust as necessary
 }
 
 document.getElementById("ticketForm").addEventListener("submit", function(event) {
