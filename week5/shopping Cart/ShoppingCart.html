@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./shopping-cart.css">
+</head>
+<body>
+    <h1>Add Books to the Shopping Cart</h1>
+    <div id="txtContainer">
+        <div class="display products" id="txtBookInfo">Books</div>
+        <div class="display">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <div id="txtCart">Cart</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="right">
+                        <input type="button" value="Clear Cart" onclick="clearCart();"/>
+                    </td>
+                    <td class="left">
+                        <input type="button" value="check Out" onclick="checkOut();"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="./shopping-cart.js"></script>
+</body>
+</html>
