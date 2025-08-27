@@ -174,3 +174,15 @@ function clickBanner() {
 function clickSidebar() {
     window.open("https://www.ea.govt.nz/", "_blank");
 }
+
+function openWireFrame() {
+    window.open("../assets/wireFrame/wireFrame.pdf", "_blank");
+}
+
+function openSidebarStoryboard() {
+    window.open("../assets/storyBoards/Storyboard task2.pdf", "_blank");
+}
+
+function openBannerStoryboard() {
+    window.open("../assets/storyBoards/Storyboard task1.pdf", "_blank");
+}
