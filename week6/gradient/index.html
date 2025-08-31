@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">
+        <canvas id="canvas1" width="400" height="400">
+            Your browser doesn't support the canvas! Try another browser.
+        </canvas>
+    </div>
+    <script>
+        var mycanvas = document.getElementById("canvas1");
+        var cntx = mycanvas.getContext('2d');
+
+        // var mygradient1 = cntx.createLinearGradient(0, 0, 400, 400);
+        // mygradient1.addColorStop(0, "#ffdd30");
+        // mygradient1.addColorStop(0.4, "#3de6a6");
+        // mygradient1.addColorStop(0.5, "#003333");
+        // mygradient1.addColorStop(0.82, "#00ccee");
+        // mygradient1.addColorStop(1, "#333333");
+        // cntx.fillStyle = mygradient1;
+        // cntx.fillRect(0, 0, 200, 200);
+
+        // var mygradient2 = cntx.createLinearGradient(400, 0, 0, 400);
+        // mygradient2.addColorStop(0, "#ffdd30");
+        // mygradient2.addColorStop(0.4, "#3de6a6");
+        // mygradient2.addColorStop(0.5, "#003333");
+        // mygradient2.addColorStop(0.82, "#00ccee");
+        // mygradient2.addColorStop(1, "#333333");
+        // cntx.fillStyle = mygradient2;
+        // cntx.fillRect(200, 0, 200, 200);
+
+        // var mygradient3 = cntx.createLinearGradient(0, 400, 400, 0);
+        // mygradient3.addColorStop(0, "#ffdd30");
+        // mygradient3.addColorStop(0.4, "#3de6a6");
+        // mygradient3.addColorStop(0.5, "#003333");
+        // mygradient3.addColorStop(0.82, "#00ccee");
+        // mygradient3.addColorStop(1, "#333333");
+        // cntx.fillStyle = mygradient3;
+        // cntx.fillRect(0, 200, 200, 200);
+
+        // var mygradient4 = cntx.createLinearGradient(400, 400, 0, 0);
+        // mygradient4.addColorStop(0, "#ffdd30");
+        // mygradient4.addColorStop(0.4, "#3de6a6");
+        // mygradient4.addColorStop(0.5, "#003333");
+        // mygradient4.addColorStop(0.82, "#00ccee");
+        // mygradient4.addColorStop(1, "#333333");
+        // cntx.fillStyle = mygradient4;
+        // cntx.fillRect(200, 200, 200, 200);
+
+        var mygradient1 = cntx.createRadialGradient(10, 10, 100, 20, 20, 200);
+        mygradient1.addColorStop(0, "#ffdd30");
+        mygradient1.addColorStop(0.4, "#3de6a6");
+        mygradient1.addColorStop(0.5, "#003333");
+        mygradient1.addColorStop(0.82, "#00ccee");
+        mygradient1.addColorStop(1, "#333333");
+        cntx.fillStyle = mygradient1;
+        cntx.fillRect(0, 0, 200, 200);
+
+        var mygradient2 = cntx.createRadialGradient(390, 10, 100, 380, 20, 200);
+        mygradient2.addColorStop(0, "#ffdd30");
+        mygradient2.addColorStop(0.4, "#3de6a6");
+        mygradient2.addColorStop(0.5, "#003333");
+        mygradient2.addColorStop(0.82, "#00ccee");
+        mygradient2.addColorStop(1, "#333333");
+        cntx.fillStyle = mygradient2;
+        cntx.fillRect(200, 0, 200, 200);
+
+        var mygradient3 = cntx.createRadialGradient(10, 390, 100, 20, 380, 200);
+        mygradient3.addColorStop(0, "#ffdd30");
+        mygradient3.addColorStop(0.4, "#3de6a6");
+        mygradient3.addColorStop(0.5, "#003333");
+        mygradient3.addColorStop(0.82, "#00ccee");
+        mygradient3.addColorStop(1, "#333333");
+        cntx.fillStyle = mygradient3;
+        cntx.fillRect(0, 200, 200, 200);
+
+        var mygradient4 = cntx.createRadialGradient(390, 390, 100, 380, 380, 200);
+        mygradient4.addColorStop(0, "#ffdd30");
+        mygradient4.addColorStop(0.4, "#3de6a6");
+        mygradient4.addColorStop(0.5, "#003333");
+        mygradient4.addColorStop(0.82, "#00ccee");
+        mygradient4.addColorStop(1, "#333333");
+        cntx.fillStyle = mygradient4;
+        cntx.fillRect(200, 200, 200, 200);
+    </script>
+</body>
+
+</html>
