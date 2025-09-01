@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas Example Move</title>
+</head>
+<body onLoad="init();">
+    <canvas id="myCanvas" width="400" height="400">
+    </canvas>
+
+
+    <script>
+        var context;
+        var x = 10;
+        var y = 10;
+        var dx = 20;
+        var dy = 20;
+        var myMove;
+        function init() {
+            context = myCanvas.getContext('2d');
+            myMove = setInterval(draw, 110);
+        }
+
+        function draw() {
+            //context.clearRect(0,0, 400,400);
+            context.beginPath();
+            context.fillStyle = "#FF00FF";
+            // Draws a circle of radius 10 at the coordinates 10,10 on the canvas
+            context.arc(x, y, 10, 0, 2 * Math.PI, true);
+            context.closePath();
+            context.fill();
+            x += dx;
+            //y+=dy;
+            if (x > 300) { clearInterval(myMove); }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onLoad="init();">
+    <canvas id="canvas1" width="600" height="600">
+    </canvas>
+
+    <script>
+        var dc=0.05;
+        var c1=0;
+        var c2=0.05*Math.PI;
+        var rad=10;
+        var drad=0.2;
+        var col="#FF00FF";
+
+        var myMove;
+        var myCanvas = document.getElementById("canvas1");
+        var context= myCanvas.getContext('2d');
+
+        function init()
+        {
+            myMove=setInterval(draw, 20);
+        }
+
+        function draw()
+        {
+            context.beginPath();
+            context.lineWidth=5;
+            context.strokeStyle=col;
+            context.arc(200, 200, rad, c1, c2, false);
+            context.stroke();
+            rad+=drad;
+            c1=c1+dc;
+            c2=c2+dc
+            if(rad>100){
+                clearInterval(myMove);
+            }
+        }
+    </script>
+</body>
+</html>
