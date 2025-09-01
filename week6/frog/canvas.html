@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onLoad="drawFrog();">
+    <!-- 1. definationn a vanvas -->
+    <canvas id="myCanvas" width="500px" height="500px" Border="DarkGreen, solid, 12px" >
+
+    </canvas>
+
+    <script>
+        let myCanvas = document.getElementById("myCanvas");
+        let cntx = myCanvas.getContext('2d');
+        let lx = 200;
+        let ly = 185;
+        let rx = 310;
+        let ry = 185;
+        let cx = 1;
+        let cy = 1;
+
+        function drawFrog() {
+                //2. draw rect
+                cntx.fillStyle = '#CC99FF';
+                cntx.fillRect(20, 20, 460, 460);
+
+
+                //5. two legs
+                cntx.fillStyle = '#009966';
+                cntx.fillRect(130, 390, 45, 85);
+                cntx.fillRect(325, 390, 45, 85);
+
+                //4. body
+                cntx.beginPath();
+                cntx.arc(250, 400, 70, 0, 2 * Math.PI, false);
+                cntx.lineWidth = "10";
+                cntx.strokeStyle = "black";
+                cntx.fillStyle = "#33FF99";
+                cntx.fill();
+                cntx.closePath();
+                cntx.stroke();
+
+                //3. frog face
+                cntx.beginPath();
+                cntx.arc(250, 250, 100, 0, 2 * Math.PI, false);
+                cntx.lineWidth = "4";
+                cntx.strokeStyle = "black";
+                cntx.fillStyle = "#33FF99";
+                cntx.fill();
+                cntx.closePath();
+                cntx.stroke();
+
+                //6. mouth
+                cntx.beginPath();
+                cntx.arc(250, 260, 80, Math.PI, 2 * Math.PI, true);
+                cntx.lineWidth = "10";
+                cntx.strokeStyle = "red";
+                cntx.closePath();
+                cntx.stroke();
+
+
+
+                drayEyes();
+
+                setInterval(drayEyes, 180);
+            }
+
+        function drayEyes() {
+            lx += cx;
+            rx += cx;
+            //ly += cy;
+            //ry += cy;
+            if(lx-5<152)cx=-cx;
+            if(lx+5>228)cx=-cx;
+
+                //7.1 left eyelids
+                cntx.beginPath();
+                cntx.arc(190, 200, 50, Math.PI, 2 * Math.PI, false);
+                cntx.lineWidth = "4";
+                cntx.strokeStyle = "green";
+                cntx.fillStyle = "#FFFF66";
+                cntx.fill();
+                cntx.closePath();
+                cntx.stroke();
+
+                //7.2 right eyelids
+                cntx.beginPath();
+                cntx.arc(300, 200, 50, Math.PI, 2 * Math.PI, false);
+                cntx.lineWidth = "4";
+                cntx.strokeStyle = "green";
+                cntx.fillStyle = "#FFFF66";
+                cntx.fill();
+                cntx.closePath()
+                cntx.closePath();
+                cntx.stroke();
+
+                //8.1 left eyes
+                cntx.beginPath();
+                cntx.arc(lx, ly, 10, 0, 2 * Math.PI, false);
+                cntx.fillStyle = "green";
+                cntx.fill();
+                cntx.closePath();
+                cntx.stroke();
+
+                cntx.beginPath();
+                cntx.arc(lx, ly, 9, 0, 2 * Math.PI, false);
+                cntx.fillStyle = "black";
+                cntx.fill();
+                cntx.closePath();
+                cntx.stroke();
+
+                //8.2 right eyes
+                cntx.beginPath();
+                cntx.arc(rx, ry, 10, 0, 2 * Math.PI, false);
+                cntx.fillStyle = "green";
+                cntx.fill();
+                cntx.closePath();
+                cntx.stroke();
+
+                cntx.beginPath();
+                cntx.arc(rx, ry, 9, 0, 2 * Math.PI, false);
+                cntx.fillStyle = "black";
+                cntx.fill();
+                cntx.closePath();
+                cntx.stroke();
+            }
+
+            
+    </script>
+</body>
+</html>
