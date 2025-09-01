@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="2000px" height="1000px" Border="DarkGreen, solid, 12px" >
+
+    </canvas>
+
+    <script>
+        document.getElementById("myCanvas").addEventListener('click', function(event) {
+            const x = event.clientX; // 相对于视口的水平坐标
+            const y = event.clientY; // 相对于视口的垂直坐标
+
+            cntx.beginPath();
+            cntx.arc(x,y,radius, 0, 2*Math.PI, true);
+            cntx.strokeStyle = "green";
+            cntx.fillStyle = "green";
+            cntx.fill();
+            cntx.stroke();
+        });
+
+        var x=[150,50,60,250,290];
+        var y=[50,100,50,250,50];
+        let myCanvas = document.getElementById("myCanvas");
+        let cntx = myCanvas.getContext('2d');
+        let radius = 50;
+
+        for (var i = 0; i < x.length; i++) {
+            cntx.beginPath();
+            cntx.arc(x[i],y[i],radius, 0, 2*Math.PI, true);
+            cntx.strokeStyle = "red";
+            cntx.fillStyle = "red";
+            cntx.fill();
+            cntx.stroke();
+            }
+    </script>
+</body>
+</html>
