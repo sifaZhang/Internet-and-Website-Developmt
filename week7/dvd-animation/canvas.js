@@ -1,5 +1,6 @@
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
+const mySound = new Audio("./collision.wav");
 
 function Logo(event) {
     this.loading = true;
@@ -34,8 +35,9 @@ function Logo(event) {
         if(collision){
              context.fillStyle = "red";  // 背景色可以换成任意颜色
              context.fillRect(this.x, this.y, this.scaledWidth, this.scaledHeight);
+            mySound.play();
         }
-        
+
         context.drawImage(
             this.image,
             this.x,
