@@ -1,0 +1,15 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "request": "launch",
+            "name": "Launch Server (Terminal)",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "command": "npm start",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
